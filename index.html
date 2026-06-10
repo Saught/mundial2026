@@ -15,312 +15,175 @@
   body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;}
   header{background:linear-gradient(135deg,#0d1b2e,#162035,#0a1525);border-bottom:2px solid var(--gold);padding:18px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 4px 30px rgba(245,197,66,.15);}
   .hball{font-size:32px;animation:bob 3s ease-in-out infinite;}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-  header h1{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:3px;color:var(--gold);line-height:1;}
-  header p{font-size:.7rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
-  .hright{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
-  .badge{background:var(--gold);color:#000;font-size:.62rem;font-weight:700;padding:3px 8px;border-radius:999px;letter-spacing:.8px;text-transform:uppercase;}
-
+  header h1{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:3px;color:var(--gold);}
   .controls{padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:10px;}
   .ctrl-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-  .ctrl-label{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-right:4px;white-space:nowrap;}
-  .filter-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer;font-size:.75rem;font-family:'Inter',sans-serif;transition:all .2s;}
-  .filter-btn:hover,.filter-btn.active{background:var(--gold);border-color:var(--gold);color:#000;font-weight:600;}
-  .country-select{background:var(--card);border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:999px;font-size:.75rem;font-family:'Inter',sans-serif;outline:none;cursor:pointer;min-width:140px;}
-  .country-select:focus{border-color:var(--gold);}
-  .search-box{background:var(--card);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:999px;font-size:.75rem;font-family:'Inter',sans-serif;outline:none;width:190px;}
-  .search-box:focus{border-color:var(--gold);}
-  .search-box::placeholder,.country-select option{color:var(--muted);}
-
+  .filter-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer;font-size:.75rem;transition:all .2s;}
+  .filter-btn:hover,.filter-btn.active{background:var(--gold);color:#000;font-weight:600;}
+  .country-select,.search-box{background:var(--card);border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:999px;font-size:.75rem;}
   .main{padding:20px;max-width:1400px;margin:0 auto;}
-  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
-  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
-  .stat-card .num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold);line-height:1;}
-  .stat-card .lbl{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:3px;}
-
   .day-section{margin-bottom:28px;}
   .day-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:7px;border-bottom:1px solid var(--border);}
-  .day-date{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:2px;color:var(--gold);}
-  .day-count{background:var(--surface);color:var(--muted);font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid var(--border);}
-
+  .day-date{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--gold);}
   .matches-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:11px;}
-  .match-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;transition:all .25s;position:relative;overflow:hidden;}
+  .match-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;position:relative;}
   .match-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--group-color,var(--teal));opacity:.8;}
-  .match-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,197,66,.1);}
-  .match-card.highlighted{border-color:var(--gold) !important;box-shadow:0 0 0 2px rgba(245,197,66,.3);}
-
-  .match-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
-  .group-tag{font-size:.62rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:2px 8px;border-radius:4px;background:var(--group-color,var(--teal));color:#000;}
-  .match-venue{font-size:.62rem;color:var(--muted);text-align:right;max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-
-  .teams-row{display:flex;align-items:center;gap:6px;margin-bottom:10px;}
-  .team{flex:1;text-align:center;}
-  .team-flag{font-size:1.9rem;display:block;margin-bottom:3px;}
-  .team-name{font-size:.72rem;font-weight:600;letter-spacing:.4px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-
-  .score-display{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:65px;}
+  .match-meta{display:flex;justify-content:space-between;margin-bottom:10px;font-size:.62rem;color:var(--muted);}
+  .group-tag{font-weight:700;padding:2px 8px;border-radius:4px;color:#000;text-transform:uppercase;}
+  .teams-row{display:flex;align-items:center;gap:6px;}
+  .team{flex:1;text-align:center;font-size:.72rem;font-weight:600;}
   .score-box{display:flex;align-items:center;gap:7px;background:var(--bg);border-radius:10px;padding:7px 10px;border:1px solid var(--border);}
-  .score-num{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--gold);line-height:1;min-width:16px;text-align:center;}
-  .score-sep{color:var(--muted);font-size:1.1rem;}
-  .vs-label{font-size:.58rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
-  .outcome-badge{display:inline-block;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:999px;letter-spacing:.4px;margin-top:2px;}
-  .outcome-h{background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.3);}
-  .outcome-d{background:rgba(245,197,66,.15);color:var(--gold);border:1px solid rgba(245,197,66,.3);}
-  .outcome-a{background:rgba(230,57,70,.15);color:var(--red);border:1px solid rgba(230,57,70,.3);}
-
-  .players-row{border-top:1px solid var(--border);padding-top:9px;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:3px;}
-  .player-side{font-size:.6rem;color:var(--muted);}
-  .player-side strong{display:block;color:var(--teal);font-size:.65rem;margin-bottom:2px;}
-  .player-side span{display:block;line-height:1.6;}
-
-  .no-results{text-align:center;padding:60px 20px;color:var(--muted);}
-  .no-results .icon{font-size:3rem;margin-bottom:12px;}
+  .score-num{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--gold);}
+  .players-row{border-top:1px solid var(--border);padding-top:9px;margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.6rem;color:var(--muted);}
   .hidden{display:none!important;}
-
-  @media(max-width:640px){
-    .stats-bar{grid-template-columns:repeat(2,1fr);}
-    .matches-grid{grid-template-columns:1fr;}
-    header h1{font-size:1.3rem;}
-    .ctrl-row{gap:5px;}
-    .search-box,.country-select{width:100%;}
-  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="hball">⚽</div>
-  <div>
-    <h1>Mundial 2026 — Predictor</h1>
-    <p>Fase de Grupos · 11–27 Junio · Plantillas Oficiales</p>
-  </div>
-  <div class="hright">
-    <span class="badge">🇲🇽 🇺🇸 🇨🇦</span>
-    <span class="badge">48 selecciones</span>
-  </div>
+  <div><h1>Mundial 2026 — Predictor</h1></div>
 </header>
 
 <div class="controls">
-  <div class="ctrl-row">
-    <span class="ctrl-label">📅 Fecha:</span>
+  <div class="ctrl-row" id="date-filters">
     <button class="filter-btn active" onclick="filterDay('all',this)">Todos</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-20',this)">Jun 20</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-21',this)">Jun 21</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-22',this)">Jun 22</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-23',this)">Jun 23</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-24',this)">Jun 24</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-25',this)">Jun 25</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-26',this)">Jun 26</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-27',this)">Jun 27</button>
   </div>
   <div class="ctrl-row">
-    <span class="ctrl-label">🔠 Grupo:</span>
-    <select class="country-select" onchange="filterGroup(this.value)">
-      <option value="">— Todos —</option>
-      <option value="A">Grupo A</option>
-      <option value="B">Grupo B</option>
-      <option value="C">Grupo C</option>
-      <option value="D">Grupo D</option>
-      <option value="E">Grupo E</option>
-      <option value="F">Grupo F</option>
-      <option value="G">Grupo G</option>
-      <option value="H">Grupo H</option>
-      <option value="I">Grupo I</option>
-      <option value="J">Grupo J</option>
-      <option value="K">Grupo K</option>
-      <option value="L">Grupo L</option>
+    <select class="country-select" id="group-filter" onchange="applyFilters()">
+      <option value="">Todos los grupos</option>
+      <option value="A">Grupo A</option><option value="B">Grupo B</option>
+      <option value="C">Grupo C</option><option value="D">Grupo D</option>
+      <option value="E">Grupo E</option><option value="F">Grupo F</option>
+      <option value="G">Grupo G</option><option value="H">Grupo H</option>
+      <option value="I">Grupo I</option><option value="J">Grupo J</option>
+      <option value="K">Grupo K</option><option value="L">Grupo L</option>
     </select>
-    <span class="ctrl-label" style="margin-left: 8px;">🌍 País:</span>
-    <select class="country-select" onchange="filterCountry(this.value)">
-      <option value="">— Todos los países —</option>
-      <option value="Países Bajos">🇳🇱 Países Bajos</option>
-      <option value="Suecia">🇸🇪 Suecia</option>
-      <option value="Alemania">🇩🇪 Alemania</option>
-      <option value="Costa de Marfil">🇨🇮 Costa de Marfil</option>
-      <option value="Ecuador">🇪🇨 Ecuador</option>
-      <option value="Curazao">🇨🇼 Curazao</option>
-      <option value="Túnez">🇹🇳 Túnez</option>
-      <option value="Japón">🇯🇵 Japón</option>
-      <option value="España">🇪🇸 España</option>
-      <option value="Arabia Saudí">🇸🇦 Arabia Saudí</option>
-      <option value="Bélgica">🇧🇪 Bélgica</option>
-      <option value="Irán">🇮🇷 Irán</option>
-      <option value="Uruguay">🇺🇾 Uruguay</option>
-      <option value="Cabo Verde">🇨🇻 Cabo Verde</option>
-      <option value="Nueva Zelanda">🇳🇿 Nueva Zelanda</option>
-      <option value="Egipto">🇪🇬 Egipto</option>
-      <option value="Argentina">🇦🇷 Argentina</option>
-      <option value="Austria">🇦🇹 Austria</option>
-      <option value="Francia">🇫🇷 Francia</option>
-      <option value="Irak">🇮🇶 Irak</option>
-      <option value="Noruega">🇳🇴 Noruega</option>
-      <option value="Senegal">🇸🇳 Senegal</option>
-      <option value="Jordania">🇯🇴 Jordania</option>
-      <option value="Argelia">🇩🇿 Argelia</option>
-      <option value="Portugal">🇵🇹 Portugal</option>
-      <option value="Uzbekistán">🇺🇿 Uzbekistán</option>
-      <option value="Inglaterra">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</option>
-      <option value="Ghana">🇬🇭 Ghana</option>
-      <option value="Panamá">🇵🇦 Panamá</option>
-      <option value="Croacia">🇭🇷 Croacia</option>
-      <option value="Colombia">🇨🇴 Colombia</option>
-      <option value="RD Congo">🇨🇩 RD Congo</option>
-      <option value="Suiza">🇨🇭 Suiza</option>
-      <option value="Canadá">🇨🇦 Canadá</option>
-      <option value="Bosnia y Herzegovina">🇧🇦 Bosnia y Herzegovina</option>
-      <option value="Catar">🇶🇦 Catar</option>
-      <option value="Escocia">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Escocia</option>
-      <option value="Brasil">🇧🇷 Brasil</option>
-      <option value="Marruecos">🇲🇦 Marruecos</option>
-      <option value="Haití">🇭🇹 Haití</option>
-      <option value="República Checa">🇨🇿 República Checa</option>
-      <option value="México">🇲🇽 México</option>
-      <option value="Sudáfrica">🇿🇦 Sudáfrica</option>
-      <option value="República de Corea">🇰🇷 República de Corea</option>
-      <option value="Turquía">🇹🇷 Turquía</option>
-      <option value="Estados Unidos">🇺🇸 Estados Unidos</option>
-      <option value="Paraguay">🇵🇾 Paraguay</option>
-      <option value="Australia">🇦🇺 Australia</option>
-    </select>
-    <input class="search-box" type="text" placeholder="🔍 Buscar jugador o país..." oninput="searchMatches(this.value)">
+    <input class="search-box" type="text" id="search-input" placeholder="🔍 Buscar equipo..." oninput="applyFilters()">
   </div>
 </div>
 
 <div class="main">
   <div id="matches-container"></div>
-  <div id="no-results" class="no-results hidden">
-    <div class="icon">🔭</div>
-    <p>No se encontraron partidos con ese criterio.</p>
-  </div>
 </div>
 
 <script>
 const GC = {A:'#f5c542',B:'#00c9b1',C:'#22c55e',D:'#e63946',E:'#a78bfa',F:'#fb923c',G:'#38bdf8',H:'#f472b6',I:'#4ade80',J:'#c084fc',K:'#fbbf24',L:'#34d399'};
-const OL = {h:'Local gana',d:'Empate',a:'Visitante gana'};
-const OC = {h:'outcome-h',d:'outcome-d',a:'outcome-a'};
-const DN = {'2026-06-20':'Sábado 20 Jun','2026-06-21':'Domingo 21 Jun','2026-06-22':'Lunes 22 Jun','2026-06-23':'Martes 23 Jun','2026-06-24':'Miércoles 24 Jun','2026-06-25':'Jueves 25 Jun','2026-06-26':'Viernes 26 Jun','2026-06-27':'Sábado 27 Jun'};
-
 const matches = [
-// JUN 20
-{id:33,date:'2026-06-20',group:'F',home:'Países Bajos',hf:'🇳🇱',away:'Suecia',af:'🇸🇪',hs:2,as:1,venue:'Houston',out:'h',hkey:['Cody Gakpo','Virgil van Dijk','Xavi Simons'],akey:['Viktor Gyökeres','Alexander Isak','Dejan Kulusevski']},
-{id:34,date:'2026-06-20',group:'E',home:'Alemania',hf:'🇩🇪',away:'Costa de Marfil',af:'🇨🇮',hs:2,as:0,venue:'Toronto',out:'h',hkey:['Kai Havertz','Jamal Musiala','Florian Wirtz'],akey:['Sébastien Haller','Franck Kessié','Simon Adingra']},
-{id:35,date:'2026-06-20',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Curazao',af:'🇨🇼',hs:2,as:0,venue:'Kansas City',out:'h',hkey:['Enner Valencia','Moisés Caicedo','Piero Hincapié'],akey:['Leandro Bacuna','Juninho Bacuna','Rangelo Janga']},
-{id:36,date:'2026-06-20',group:'F',home:'Túnez',hf:'🇹🇳',away:'Japón',af:'🇯🇵',hs:1,as:2,venue:'Monterrey',out:'a',hkey:['Hannibal Mejbri','Ellyes Skhiri','Montassar Talbi'],akey:['Takumi Minamino','Kaoru Mitoma','Wataru Endo']},
-// JUN 21
-{id:37,date:'2026-06-21',group:'H',home:'España',hf:'🇪🇸',away:'Arabia Saudí',af:'🇸🇦',hs:3,as:0,venue:'Atlanta',out:'h',hkey:['Lamine Yamal','Pedri','Nico Williams'],akey:['Salem Al-Dawsari','Firas Al-Buraikan','Saud Abdulhamid']},
-{id:38,date:'2026-06-21',group:'G',home:'Bélgica',hf:'🇧🇪',away:'Irán',af:'🇮🇷',hs:2,as:1,venue:'Los Ángeles',out:'h',hkey:['Kevin De Bruyne','Jeremy Doku','Lois Openda'],akey:['Mehdi Taremi','Sardar Azmoun','Alireza Jahanbakhsh']},
-{id:39,date:'2026-06-21',group:'H',home:'Uruguay',hf:'🇺🇾',away:'Cabo Verde',af:'🇨🇻',hs:2,as:0,venue:'Miami',out:'h',hkey:['Darwin Núñez','Federico Valverde','Rodrigo Bentancur'],akey:['Logan Costa','Patrick Andrade','Jovane Cabral']},
-{id:40,date:'2026-06-21',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Egipto',af:'🇪🇬',hs:1,as:2,venue:'Vancouver',out:'a',hkey:['Chris Wood','Liberato Cacace','Joe Bell'],akey:['Mohamed Salah','Omar Marmoush','Mostafa Mohamed']},
-// JUN 22
-{id:41,date:'2026-06-22',group:'J',home:'Argentina',hf:'🇦🇷',away:'Austria',af:'🇦🇹',hs:2,as:1,venue:'Dallas',out:'h',hkey:['Lionel Messi','Julián Álvarez','Alexis Mac Allister'],akey:['Marcel Sabitzer','Christoph Baumgartner','Konrad Laimer']},
-{id:42,date:'2026-06-22',group:'I',home:'Francia',hf:'🇫🇷',away:'Irak',af:'🇮🇶',hs:3,as:0,venue:'Filadelfia',out:'h',hkey:['Kylian Mbappé','Bradley Barcola','William Saliba'],akey:['Aymen Hussein','Ali Jasim','Zidane Iqbal']},
-{id:43,date:'2026-06-22',group:'I',home:'Noruega',hf:'🇳🇴',away:'Senegal',af:'🇸🇳',hs:1,as:2,venue:'Nueva York/NJ',out:'a',hkey:['Erling Haaland','Martin Ødegaard','Alexander Sørloth'],akey:['Sadio Mané','Nicolas Jackson','Pape Matar Sarr']},
-{id:44,date:'2026-06-22',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argelia',af:'🇩🇿',hs:0,as:2,venue:'Bahía de SF',out:'a',hkey:['Mousa Al-Taamari','Yazan Al-Naimat','Yazeed Abulaila'],akey:['Amine Gouiri','Houssem Aouar','Rayan Aït-Nouri']},
-// JUN 23
-{id:45,date:'2026-06-23',group:'K',home:'Portugal',hf:'🇵🇹',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Houston',out:'h',hkey:['Bruno Fernandes','Rafael Leão','Vitinha'],akey:['Eldor Shomurodov','Abbosbek Fayzullaev','Oston Urunov']},
-{id:46,date:'2026-06-23',group:'L',home:'Inglaterra',hf:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',away:'Ghana',af:'🇬🇭',hs:2,as:0,venue:'Boston',out:'h',hkey:['Harry Kane','Jude Bellingham','Bukayo Saka'],akey:['Mohammed Kudus','Inaki Williams','Antoine Semenyo']},
-{id:47,date:'2026-06-23',group:'L',home:'Panamá',hf:'🇵🇦',away:'Croacia',af:'🇭🇷',hs:0,as:2,venue:'Toronto',out:'a',hkey:['Adalberto Carrasquilla','José Córdoba','Michael Amir Murillo'],akey:['Joško Gvardiol','Mateo Kovačić','Lovro Majer']},
-{id:48,date:'2026-06-23',group:'K',home:'Colombia',hf:'🇨🇴',away:'RD Congo',af:'🇨🇩',hs:2,as:1,venue:'Guadalajara',out:'h',hkey:['James Rodríguez','Luis Díaz','Richard Ríos'],akey:['Chancel Mbemba','Yoane Wissa','Arthur Masuaku']},
-// JUN 24
-{id:49,date:'2026-06-24',group:'B',home:'Suiza',hf:'🇨🇭',away:'Canadá',af:'🇨🇦',hs:1,as:1,venue:'Vancouver',out:'d',hkey:['Granit Xhaka','Breel Embolo','Dan Ndoye'],akey:['Alphonso Davies','Jonathan David','Cyle Larin']},
-{id:50,date:'2026-06-24',group:'B',home:'Bosnia y Herzegovina',hf:'🇧🇦',away:'Catar',af:'🇶🇦',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Ermedin Demirović','Amar Dedić','Sead Kolašinac'],akey:['Akram Afif','Almoez Ali','Jassem Gaber']},
-{id:51,date:'2026-06-24',group:'C',home:'Escocia',hf:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',away:'Brasil',af:'🇧🇷',hs:0,as:3,venue:'Miami',out:'a',hkey:['Scott McTominay','Andy Robertson','John McGinn'],akey:['Vinicius Jr.','Raphinha','Rodrygo']},
-{id:52,date:'2026-06-24',group:'C',home:'Marruecos',hf:'🇲🇦',away:'Haití',af:'🇭🇹',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Achraf Hakimi','Brahim Díaz','Youssef En-Nesyri'],akey:['Duckens Nazon','Jean-Ricner Bellegarde','Frantzdy Pierrot']},
-{id:53,date:'2026-06-24',group:'A',home:'República Checa',hf:'🇨🇿',away:'México',af:'🇲🇽',hs:1,as:1,venue:'Ciudad de México',out:'d',hkey:['Patrik Schick','Tomáš Souček','Adam Hložek'],akey:['Santiago Giménez','Edson Álvarez','Raúl Jiménez']},
-{id:54,date:'2026-06-24',group:'A',home:'Sudáfrica',hf:'🇿🇦',away:'República de Corea',af:'🇰🇷',hs:0,as:2,venue:'Monterrey',out:'a',hkey:['Lyle Foster','Teboho Mokoena','Ronwen Williams'],akey:['Son Heung-min','Lee Kang-in','Kim Min-jae']},
-// JUN 25
-{id:55,date:'2026-06-25',group:'E',home:'Curazao',hf:'🇨🇼',away:'Costa de Marfil',af:'🇨🇮',hs:0,as:2,venue:'Filadelfia',out:'a',hkey:['Leandro Bacuna','Juninho Bacuna'],akey:['Sébastien Haller','Franck Kessié']},
-{id:56,date:'2026-06-25',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Alemania',af:'🇩🇪',hs:0,as:3,venue:'Nueva York/NJ',out:'a',hkey:['Enner Valencia','Moisés Caicedo'],akey:['Kai Havertz','Jamal Musiala']},
-{id:57,date:'2026-06-25',group:'F',home:'Japón',hf:'🇯🇵',away:'Suecia',af:'🇸🇪',hs:1,as:1,venue:'Dallas',out:'d',hkey:['Takumi Minamino','Kaoru Mitoma'],akey:['Viktor Gyökeres','Alexander Isak']},
-{id:58,date:'2026-06-25',group:'F',home:'Túnez',hf:'🇹🇳',away:'Países Bajos',af:'🇳🇱',hs:0,as:2,venue:'Kansas City',out:'a',hkey:['Hannibal Mejbri','Ellyes Skhiri'],akey:['Cody Gakpo','Virgil van Dijk']},
-{id:59,date:'2026-06-25',group:'D',home:'Turquía',hf:'🇹🇷',away:'Estados Unidos',af:'🇺🇸',hs:1,as:2,venue:'Los Ángeles',out:'a',hkey:['Hakan Çalhanoğlu','Arda Güler'],akey:['Christian Pulisic','Gio Reyna']},
-{id:60,date:'2026-06-25',group:'D',home:'Paraguay',hf:'🇵🇾',away:'Australia',af:'🇦🇺',hs:1,as:0,venue:'Bahía de SF',out:'h',hkey:['Miguel Almirón','Diego Gómez'],akey:['Mathew Leckie','Jackson Irvine']},
-// JUN 26
-{id:61,date:'2026-06-26',group:'I',home:'Noruega',hf:'🇳🇴',away:'Francia',af:'🇫🇷',hs:1,as:2,venue:'Boston',out:'a',hkey:['Erling Haaland','Martin Ødegaard'],akey:['Kylian Mbappé','Bradley Barcola']},
-{id:62,date:'2026-06-26',group:'I',home:'Senegal',hf:'🇸🇳',away:'Irak',af:'🇮🇶',hs:2,as:1,venue:'Toronto',out:'h',hkey:['Sadio Mané','Nicolas Jackson'],akey:['Aymen Hussein','Ali Jasim']},
-{id:63,date:'2026-06-26',group:'H',home:'Cabo Verde',hf:'🇨🇻',away:'Arabia Saudí',af:'🇸🇦',hs:1,as:1,venue:'Houston',out:'d',hkey:['Logan Costa','Patrick Andrade'],akey:['Salem Al-Dawsari','Firas Al-Buraikan']},
-{id:64,date:'2026-06-26',group:'H',home:'Uruguay',hf:'🇺🇾',away:'España',af:'🇪🇸',hs:1,as:1,venue:'Guadalajara',out:'d',hkey:['Darwin Núñez','Federico Valverde'],akey:['Lamine Yamal','Nico Williams']},
-{id:65,date:'2026-06-26',group:'G',home:'Egipto',hf:'🇪🇬',away:'Irán',af:'🇮🇷',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Mohamed Salah','Omar Marmoush'],akey:['Mehdi Taremi','Sardar Azmoun']},
-{id:66,date:'2026-06-26',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Bélgica',af:'🇧🇪',hs:0,as:3,venue:'Vancouver',out:'a',hkey:['Chris Wood','Liberato Cacace'],akey:['Kevin De Bruyne','Jeremy Doku']},
-// JUN 27
-{id:67,date:'2026-06-27',group:'L',home:'Panamá',hf:'🇵🇦',away:'Inglaterra',af:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',hs:0,as:3,venue:'Nueva York/NJ',out:'a',hkey:['Adalberto Carrasquilla','José Córdoba'],akey:['Harry Kane','Jude Bellingham']},
-{id:68,date:'2026-06-27',group:'L',home:'Croacia',hf:'🇭🇷',away:'Ghana',af:'🇬🇭',hs:1,as:1,venue:'Filadelfia',out:'d',hkey:['Joško Gvardiol','Mateo Kovačić'],akey:['Mohammed Kudus','Inaki Williams']},
-{id:69,date:'2026-06-27',group:'K',home:'Colombia',hf:'🇨🇴',away:'Portugal',af:'🇵🇹',hs:1,as:1,venue:'Miami',out:'d',hkey:['James Rodríguez','Luis Díaz'],akey:['Bruno Fernandes','Rafael Leão']},
-{id:70,date:'2026-06-27',group:'K',home:'RD Congo',hf:'🇨🇩',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Yoane Wissa','Chancel Mbemba'],akey:['Eldor Shomurodov','Abbosbek Fayzullaev']},
-{id:71,date:'2026-06-27',group:'J',home:'Argelia',hf:'🇩🇿',away:'Austria',af:'🇦🇹',hs:1,as:2,venue:'Kansas City',out:'a',hkey:['Amine Gouiri','Houssem Aouar'],akey:['Marcel Sabitzer','Christoph Baumgartner']},
-{id:72,date:'2026-06-27',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argentina',af:'🇦🇷',hs:0,as:3,venue:'Dallas',out:'a',hkey:['Mousa Al-Taamari','Yazan Al-Naimat'],akey:['Lionel Messi','Julián Álvarez']}
+  // 11-19 Junio
+  {id:1, date:'2026-06-11', group:'A', home:'México', hf:'🇲🇽', away:'Sudáfrica', af:'🇿🇦', hs:2, as:0, venue:'CDMX', hkey:['S. Giménez'], akey:['L. Foster']},
+  {id:2, date:'2026-06-12', group:'B', home:'Canadá', hf:'🇨🇦', away:'Catar', af:'🇶🇦', hs:1, as:1, venue:'Toronto', hkey:['A. Davies'], akey:['A. Afif']},
+  {id:3, date:'2026-06-13', group:'C', home:'Brasil', hf:'🇧🇷', away:'Marruecos', af:'🇲🇦', hs:3, as:1, venue:'LA', hkey:['Vinícius Jr.'], akey:['B. Díaz']},
+  {id:4, date:'2026-06-14', group:'D', home:'Estados Unidos', hf:'🇺🇸', away:'Turquía', af:'🇹🇷', hs:2, as:1, venue:'NY', hkey:['C. Pulisic'], akey:['A. Güler']},
+  {id:5, date:'2026-06-15', group:'E', home:'Alemania', hf:'🇩🇪', away:'Ecuador', af:'🇪🇨', hs:2, as:0, venue:'Boston', hkey:['K. Havertz'], akey:['M. Caicedo']},
+  {id:6, date:'2026-06-16', group:'F', home:'Países Bajos', hf:'🇳🇱', away:'Túnez', af:'🇹🇳', hs:2, as:0, venue:'Houston', hkey:['C. Gakpo'], akey:['H. Mejbri']},
+  {id:7, date:'2026-06-17', group:'G', home:'Bélgica', hf:'🇧🇪', away:'Nueva Zelanda', af:'🇳🇿', hs:3, as:0, venue:'Vancouver', hkey:['K. De Bruyne'], akey:['C. Wood']},
+  {id:8, date:'2026-06-18', group:'H', home:'España', hf:'🇪🇸', away:'Uruguay', af:'🇺🇾', hs:1, as:1, venue:'Miami', hkey:['L. Yamal'], akey:['D. Núñez']},
+  {id:9, date:'2026-06-19', group:'I', home:'Francia', hf:'🇫🇷', away:'Noruega', af:'🇳🇴', hs:2, as:1, venue:'Filadelfia', hkey:['K. Mbappé'], akey:['E. Haaland']},
+  // 20-27 Junio (Tu lista)
+  {id:33,date:'2026-06-20',group:'F',home:'Países Bajos',hf:'🇳🇱',away:'Suecia',af:'🇸🇪',hs:2,as:1,venue:'Houston',out:'h',hkey:['Gakpo','Van Dijk'],akey:['Gyökeres','Isak']},
+  {id:34,date:'2026-06-20',group:'E',home:'Alemania',hf:'🇩🇪',away:'Costa de Marfil',af:'🇨🇮',hs:2,as:0,venue:'Toronto',out:'h',hkey:['Musiala','Wirtz'],akey:['Haller','Kessié']},
+  {id:35,date:'2026-06-20',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Curazao',af:'🇨🇼',hs:2,as:0,venue:'Kansas City',out:'h',hkey:['Valencia','Caicedo'],akey:['B. Bacuna','Janga']},
+  {id:36,date:'2026-06-20',group:'F',home:'Túnez',hf:'🇹🇳',away:'Japón',af:'🇯🇵',hs:1,as:2,venue:'Monterrey',out:'a',hkey:['Skhiri','Talbi'],akey:['Mitoma','Endo']},
+  {id:37,date:'2026-06-21',group:'H',home:'España',hf:'🇪🇸',away:'Arabia Saudí',af:'🇸🇦',hs:3,as:0,venue:'Atlanta',out:'h',hkey:['Yamal','Pedri'],akey:['Al-Dawsari','Al-Buraikan']},
+  {id:38,date:'2026-06-21',group:'G',home:'Bélgica',hf:'🇧🇪',away:'Irán',af:'🇮🇷',hs:2,as:1,venue:'LA',out:'h',hkey:['De Bruyne','Doku'],akey:['Taremi','Azmoun']},
+  {id:39,date:'2026-06-21',group:'H',home:'Uruguay',hf:'🇺🇾',away:'Cabo Verde',af:'🇨🇻',hs:2,as:0,venue:'Miami',out:'h',hkey:['Núñez','Valverde'],akey:['Costa','Cabral']},
+  {id:40,date:'2026-06-21',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Egipto',af:'🇪🇬',hs:1,as:2,venue:'Vancouver',out:'a',hkey:['Wood','Cacace'],akey:['Salah','Marmoush']},
+  {id:41,date:'2026-06-22',group:'J',home:'Argentina',hf:'🇦🇷',away:'Austria',af:'🇦🇹',hs:2,as:1,venue:'Dallas',out:'h',hkey:['Messi','Álvarez'],akey:['Sabitzer','Laimer']},
+  {id:42,date:'2026-06-22',group:'I',home:'Francia',hf:'🇫🇷',away:'Irak',af:'🇮🇶',hs:3,as:0,venue:'Filadelfia',out:'h',hkey:['Mbappé','Barcola'],akey:['Hussein','Jasim']},
+  {id:43,date:'2026-06-22',group:'I',home:'Noruega',hf:'🇳🇴',away:'Senegal',af:'🇸🇳',hs:1,as:2,venue:'NY/NJ',out:'a',hkey:['Haaland','Ødegaard'],akey:['Mané','Jackson']},
+  {id:44,date:'2026-06-22',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argelia',af:'🇩🇿',hs:0,as:2,venue:'Bahía de SF',out:'a',hkey:['Al-Taamari','Abulaila'],akey:['Gouiri','Aouar']},
+  {id:45,date:'2026-06-23',group:'K',home:'Portugal',hf:'🇵🇹',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Houston',out:'h',hkey:['Fernandes','Leão'],akey:['Shomurodov','Fayzullaev']},
+  {id:46,date:'2026-06-23',group:'L',home:'Inglaterra',hf:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',away:'Ghana',af:'🇬🇭',hs:2,as:0,venue:'Boston',out:'h',hkey:['Kane','Saka'],akey:['Kudus','Williams']},
+  {id:47,date:'2026-06-23',group:'L',home:'Panamá',hf:'🇵🇦',away:'Croacia',af:'🇭🇷',hs:0,as:2,venue:'Toronto',out:'a',hkey:['Carrasquilla','Córdoba'],akey:['Gvardiol','Kovačić']},
+  {id:48,date:'2026-06-23',group:'K',home:'Colombia',hf:'🇨🇴',away:'RD Congo',af:'🇨🇩',hs:2,as:1,venue:'Guadalajara',out:'h',hkey:['Rodríguez','Díaz'],akey:['Mbemba','Wissa']},
+  {id:49,date:'2026-06-24',group:'B',home:'Suiza',hf:'🇨🇭',away:'Canadá',af:'🇨🇦',hs:1,as:1,venue:'Vancouver',out:'d',hkey:['Xhaka','Embolo'],akey:['Davies','David']},
+  {id:50,date:'2026-06-24',group:'B',home:'Bosnia y Herzegovina',hf:'🇧🇦',away:'Catar',af:'🇶🇦',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Demirović','Dedić'],akey:['Afif','Ali']},
+  {id:51,date:'2026-06-24',group:'C',home:'Escocia',hf:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',away:'Brasil',af:'🇧🇷',hs:0,as:3,venue:'Miami',out:'a',hkey:['McTominay','McGinn'],akey:['Vinicius','Rodrygo']},
+  {id:52,date:'2026-06-24',group:'C',home:'Marruecos',hf:'🇲🇦',away:'Haití',af:'🇭🇹',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Hakimi','Díaz'],akey:['Nazon','Pierrot']},
+  {id:53,date:'2026-06-24',group:'A',home:'República Checa',hf:'🇨🇿',away:'México',af:'🇲🇽',hs:1,as:1,venue:'CDMX',out:'d',hkey:['Schick','Souček'],akey:['Giménez','Álvarez']},
+  {id:54,date:'2026-06-24',group:'A',home:'Sudáfrica',hf:'🇿🇦',away:'República de Corea',af:'🇰🇷',hs:0,as:2,venue:'Monterrey',out:'a',hkey:['Foster','Mokoena'],akey:['Son','Lee']},
+  {id:55,date:'2026-06-25',group:'E',home:'Curazao',hf:'🇨🇼',away:'Costa de Marfil',af:'🇨🇮',hs:0,as:2,venue:'Filadelfia',out:'a',hkey:['Bacuna'],akey:['Haller','Kessié']},
+  {id:56,date:'2026-06-25',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Alemania',af:'🇩🇪',hs:0,as:3,venue:'NY/NJ',out:'a',hkey:['Valencia','Caicedo'],akey:['Havertz','Musiala']},
+  {id:57,date:'2026-06-25',group:'F',home:'Japón',hf:'🇯🇵',away:'Suecia',af:'🇸🇪',hs:1,as:1,venue:'Dallas',out:'d',hkey:['Minamino','Mitoma'],akey:['Gyökeres','Isak']},
+  {id:58,date:'2026-06-25',group:'F',home:'Túnez',hf:'🇹🇳',away:'Países Bajos',af:'🇳🇱',hs:0,as:2,venue:'Kansas City',out:'a',hkey:['Mejbri'],akey:['Gakpo','Van Dijk']},
+  {id:59,date:'2026-06-25',group:'D',home:'Turquía',hf:'🇹🇷',away:'Estados Unidos',af:'🇺🇸',hs:1,as:2,venue:'LA',out:'a',hkey:['Çalhanoğlu','Güler'],akey:['Pulisic','Reyna']},
+  {id:60,date:'2026-06-25',group:'D',home:'Paraguay',hf:'🇵🇾',away:'Australia',af:'🇦🇺',hs:1,as:0,venue:'Bahía de SF',out:'h',hkey:['Almirón','Gómez'],akey:['Leckie','Irvine']},
+  {id:61,date:'2026-06-26',group:'I',home:'Noruega',hf:'🇳🇴',away:'Francia',af:'🇫🇷',hs:1,as:2,venue:'Boston',out:'a',hkey:['Haaland','Ødegaard'],akey:['Mbappé','Barcola']},
+  {id:62,date:'2026-06-26',group:'I',home:'Senegal',hf:'🇸🇳',away:'Irak',af:'🇮🇶',hs:2,as:1,venue:'Toronto',out:'h',hkey:['Mané','Jackson'],akey:['Hussein','Jasim']},
+  {id:63,date:'2026-06-26',group:'H',home:'Cabo Verde',hf:'🇨🇻',away:'Arabia Saudí',af:'🇸🇦',hs:1,as:1,venue:'Houston',out:'d',hkey:['Costa','Andrade'],akey:['Al-Dawsari','Al-Buraikan']},
+  {id:64,date:'2026-06-26',group:'H',home:'Uruguay',hf:'🇺🇾',away:'España',af:'🇪🇸',hs:1,as:1,venue:'Guadalajara',out:'d',hkey:['Núñez','Valverde'],akey:['Yamal','Williams']},
+  {id:65,date:'2026-06-26',group:'G',home:'Egipto',hf:'🇪🇬',away:'Irán',af:'🇮🇷',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Salah','Marmoush'],akey:['Taremi','Azmoun']},
+  {id:66,date:'2026-06-26',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Bélgica',af:'🇧🇪',hs:0,as:3,venue:'Vancouver',out:'a',hkey:['Wood','Cacace'],akey:['De Bruyne','Doku']},
+  {id:67,date:'2026-06-27',group:'L',home:'Panamá',hf:'🇵🇦',away:'Inglaterra',af:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',hs:0,as:3,venue:'NY/NJ',out:'a',hkey:['Carrasquilla','Córdoba'],akey:['Kane','Bellingham']},
+  {id:68,date:'2026-06-27',group:'Croacia',hf:'🇭🇷',away:'Ghana',af:'🇬🇭',hs:1,as:1,venue:'Filadelfia',out:'d',hkey:['Gvardiol','Kovačić'],akey:['Kudus','Williams']},
+  {id:69,date:'2026-06-27',group:'K',home:'Colombia',hf:'🇨🇴',away:'Portugal',af:'🇵🇹',hs:1,as:1,venue:'Miami',out:'d',hkey:['Rodríguez','Díaz'],akey:['Fernandes','Leão']},
+  {id:70,date:'2026-06-27',group:'K',home:'RD Congo',hf:'🇨🇩',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Wissa','Mbemba'],akey:['Shomurodov','Fayzullaev']},
+  {id:71,date:'2026-06-27',group:'J',home:'Argelia',hf:'🇩🇿',away:'Austria',af:'🇦🇹',hs:1,as:2,venue:'Kansas City',out:'a',hkey:['Gouiri','Aouar'],akey:['Sabitzer','Baumgartner']},
+  {id:72,date:'2026-06-27',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argentina',af:'🇦🇷',hs:0,as:3,venue:'Dallas',out:'a',hkey:['Al-Taamari','Al-Naimat'],akey:['Messi','Álvarez']}
 ];
 
-let currentDay='all', currentGroup='', currentCountry='', currentSearch='';
+let currentDay='all';
 
-function renderMatches(filtered){
-  const container=document.getElementById('matches-container');
-  const noRes=document.getElementById('no-results');
-  container.innerHTML='';
-  if(!filtered.length){noRes.classList.remove('hidden');return;}
-  noRes.classList.add('hidden');
-  const byDay={};
-  filtered.forEach(m=>{if(!byDay[m.date])byDay[m.date]=[];byDay[m.date].push(m);});
-  Object.keys(byDay).sort().forEach(date=>{
-    const ms=byDay[date];
-    const sec=document.createElement('div');sec.className='day-section';
-    sec.innerHTML=`<div class="day-header"><span class="day-date">📅 ${DN[date]||date}</span><span class="day-count">${ms.length} partido${ms.length>1?'s':''}</span></div><div class="matches-grid" id="grid-${date.replace(/-/g,'')}"></div>`;
-    container.appendChild(sec);
-    const grid=sec.querySelector(`#grid-${date.replace(/-/g,'')}`);
-    ms.forEach(m=>grid.appendChild(buildCard(m,currentCountry)));
+// Generar botones de fecha dinámicos
+const dates = [...new Set(matches.map(m => m.date))].sort();
+dates.forEach(d => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn';
+  btn.innerText = d.split('-')[2] + ' Jun';
+  btn.onclick = () => { filterDay(d, btn); };
+  document.getElementById('date-filters').appendChild(btn);
+});
+
+function applyFilters() {
+  const search = document.getElementById('search-input').value.toLowerCase();
+  const group = document.getElementById('group-filter').value;
+  let filtered = matches;
+  if (currentDay !== 'all') filtered = filtered.filter(m => m.date === currentDay);
+  if (group) filtered = filtered.filter(m => m.group === group);
+  if (search) filtered = filtered.filter(m => m.home.toLowerCase().includes(search) || m.away.toLowerCase().includes(search));
+  renderMatches(filtered);
+}
+
+function renderMatches(data) {
+  const container = document.getElementById('matches-container');
+  container.innerHTML = '';
+  const byDay = {};
+  data.forEach(m => { if(!byDay[m.date]) byDay[m.date] = []; byDay[m.date].push(m); });
+  
+  Object.keys(byDay).sort().forEach(date => {
+    const section = document.createElement('div');
+    section.className = 'day-section';
+    section.innerHTML = `<div class="day-header"><span class="day-date">📅 ${date}</span></div><div class="matches-grid"></div>`;
+    data.filter(m => m.date === date).forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'match-card';
+      card.style.setProperty('--group-color', GC[m.group] || '#ccc');
+      card.innerHTML = `
+        <div class="match-meta"><span class="group-tag" style="background:${GC[m.group]}">Grupo ${m.group}</span><span>📍 ${m.venue}</span></div>
+        <div class="teams-row">
+          <div class="team">${m.hf}<br>${m.home}</div>
+          <div class="score-box"><span class="score-num">${m.hs}</span> - <span class="score-num">${m.as}</span></div>
+          <div class="team">${m.af}<br>${m.away}</div>
+        </div>
+        <div class="players-row">
+          <div>⚡ ${m.hkey.join(', ')}</div>
+          <div style="text-align:right">⚡ ${m.akey.join(', ')}</div>
+        </div>
+      `;
+      section.querySelector('.matches-grid').appendChild(card);
+    });
+    container.appendChild(section);
   });
 }
 
-function buildCard(m, highlightCountry){
-  const c=GC[m.group]||'#00c9b1';
-  const card=document.createElement('div');
-  card.className='match-card'+(highlightCountry&&(m.home===highlightCountry||m.away===highlightCountry)?' highlighted':'');
-  card.style.setProperty('--group-color',c);
-  const hkeys=m.hkey.map(p=>`<span>${p}</span>`).join('');
-  const akeys=m.akey.map(p=>`<span>${p}</span>`).join('');
-  card.innerHTML=`
-    <div class="match-meta">
-      <span class="group-tag" style="background:${c}">Grupo ${m.group}</span>
-      <span class="match-venue">📍 ${m.venue}</span>
-    </div>
-    <div class="teams-row">
-      <div class="team"><span class="team-flag">${m.hf}</span><div class="team-name">${m.home}</div></div>
-      <div class="score-display">
-        <div class="score-box"><span class="score-num">${m.hs}</span><span class="score-sep">–</span><span class="score-num">${m.as}</span></div>
-        <span class="vs-label">Predicción</span>
-        <span class="outcome-badge ${OC[m.out]}">${OL[m.out]}</span>
-      </div>
-      <div class="team"><span class="team-flag">${m.af}</span><div class="team-name">${m.away}</div></div>
-    </div>
-    <div class="players-row">
-      <div class="player-side"><strong>⚡ ${m.home}</strong>${hkeys}</div>
-      <div class="player-side" style="text-align:right"><strong>⚡ ${m.away}</strong>${akeys}</div>
-    </div>`;
-  return card;
+function filterDay(day, btn) {
+  currentDay = day;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
 }
 
-function filterDay(day,btn){
-  currentDay=day;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  apply();
-}
-function filterGroup(val){currentGroup=val;apply();}
-function filterCountry(val){currentCountry=val;apply();}
-function searchMatches(val){currentSearch=val.toLowerCase().trim();apply();}
-function apply(){
-  let f=matches;
-  if(currentDay!=='all') f=f.filter(m=>m.date===currentDay);
-  if(currentGroup) f=f.filter(m=>m.group===currentGroup);
-  if(currentCountry) f=f.filter(m=>m.home===currentCountry||m.away===currentCountry);
-  if(currentSearch) f=f.filter(m=>
-    m.home.toLowerCase().includes(currentSearch)||
-    m.away.toLowerCase().includes(currentSearch)||
-    m.hkey.some(p=>p.toLowerCase().includes(currentSearch))||
-    m.akey.some(p=>p.toLowerCase().includes(currentSearch))
-  );
-  renderMatches(f);
-}
 renderMatches(matches);
 </script>
 </body>
