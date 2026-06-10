@@ -104,15 +104,6 @@
   <div class="ctrl-row">
     <span class="ctrl-label">📅 Fecha:</span>
     <button class="filter-btn active" onclick="filterDay('all',this)">Todos</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-11',this)">Jun 11</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-12',this)">Jun 12</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-13',this)">Jun 13</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-14',this)">Jun 14</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-15',this)">Jun 15</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-16',this)">Jun 16</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-17',this)">Jun 17</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-18',this)">Jun 18</button>
-    <button class="filter-btn" onclick="filterDay('2026-06-19',this)">Jun 19</button>
     <button class="filter-btn" onclick="filterDay('2026-06-20',this)">Jun 20</button>
     <button class="filter-btn" onclick="filterDay('2026-06-21',this)">Jun 21</button>
     <button class="filter-btn" onclick="filterDay('2026-06-22',this)">Jun 22</button>
@@ -139,70 +130,63 @@
       <option value="K">Grupo K</option>
       <option value="L">Grupo L</option>
     </select>
-
     <span class="ctrl-label" style="margin-left: 8px;">🌍 País:</span>
     <select class="country-select" onchange="filterCountry(this.value)">
       <option value="">— Todos los países —</option>
-      <option value="México">🇲🇽 México</option>
-      <option value="Sudáfrica">🇿🇦 Sudáfrica</option>
-      <option value="Corea del Sur">🇰🇷 Corea del Sur</option>
-      <option value="Chequia">🇨🇿 Chequia</option>
-      <option value="Canadá">🇨🇦 Canadá</option>
-      <option value="Bosnia-Herz.">🇧🇦 Bosnia-Herzegovina</option>
-      <option value="Qatar">🇶🇦 Qatar</option>
+      <option value="Países Bajos">🇳🇱 Países Bajos</option>
+      <option value="Suecia">🇸🇪 Suecia</option>
+      <option value="Alemania">🇩🇪 Alemania</option>
+      <option value="Costa de Marfil">🇨🇮 Costa de Marfil</option>
+      <option value="Ecuador">🇪🇨 Ecuador</option>
+      <option value="Curazao">🇨🇼 Curazao</option>
+      <option value="Túnez">🇹🇳 Túnez</option>
+      <option value="Japón">🇯🇵 Japón</option>
+      <option value="España">🇪🇸 España</option>
+      <option value="Arabia Saudí">🇸🇦 Arabia Saudí</option>
+      <option value="Bélgica">🇧🇪 Bélgica</option>
+      <option value="Irán">🇮🇷 Irán</option>
+      <option value="Uruguay">🇺🇾 Uruguay</option>
+      <option value="Cabo Verde">🇨🇻 Cabo Verde</option>
+      <option value="Nueva Zelanda">🇳🇿 Nueva Zelanda</option>
+      <option value="Egipto">🇪🇬 Egipto</option>
+      <option value="Argentina">🇦🇷 Argentina</option>
+      <option value="Austria">🇦🇹 Austria</option>
+      <option value="Francia">🇫🇷 Francia</option>
+      <option value="Irak">🇮🇶 Irak</option>
+      <option value="Noruega">🇳🇴 Noruega</option>
+      <option value="Senegal">🇸🇳 Senegal</option>
+      <option value="Jordania">🇯🇴 Jordania</option>
+      <option value="Argelia">🇩🇿 Argelia</option>
+      <option value="Portugal">🇵🇹 Portugal</option>
+      <option value="Uzbekistán">🇺🇿 Uzbekistán</option>
+      <option value="Inglaterra">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</option>
+      <option value="Ghana">🇬🇭 Ghana</option>
+      <option value="Panamá">🇵🇦 Panamá</option>
+      <option value="Croacia">🇭🇷 Croacia</option>
+      <option value="Colombia">🇨🇴 Colombia</option>
+      <option value="RD Congo">🇨🇩 RD Congo</option>
       <option value="Suiza">🇨🇭 Suiza</option>
+      <option value="Canadá">🇨🇦 Canadá</option>
+      <option value="Bosnia y Herzegovina">🇧🇦 Bosnia y Herzegovina</option>
+      <option value="Catar">🇶🇦 Catar</option>
+      <option value="Escocia">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Escocia</option>
       <option value="Brasil">🇧🇷 Brasil</option>
       <option value="Marruecos">🇲🇦 Marruecos</option>
       <option value="Haití">🇭🇹 Haití</option>
-      <option value="Escocia">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Escocia</option>
-      <option value="EE.UU.">🇺🇸 EE.UU.</option>
+      <option value="República Checa">🇨🇿 República Checa</option>
+      <option value="México">🇲🇽 México</option>
+      <option value="Sudáfrica">🇿🇦 Sudáfrica</option>
+      <option value="República de Corea">🇰🇷 República de Corea</option>
+      <option value="Turquía">🇹🇷 Turquía</option>
+      <option value="Estados Unidos">🇺🇸 Estados Unidos</option>
       <option value="Paraguay">🇵🇾 Paraguay</option>
       <option value="Australia">🇦🇺 Australia</option>
-      <option value="Turquía">🇹🇷 Turquía</option>
-      <option value="Alemania">🇩🇪 Alemania</option>
-      <option value="Curazao">🇨🇼 Curazao</option>
-      <option value="Países Bajos">🇳🇱 Países Bajos</option>
-      <option value="Japón">🇯🇵 Japón</option>
-      <option value="Costa de Marfil">🇨🇮 Costa de Marfil</option>
-      <option value="Ecuador">🇪🇨 Ecuador</option>
-      <option value="Suecia">🇸🇪 Suecia</option>
-      <option value="Túnez">🇹🇳 Túnez</option>
-      <option value="España">🇪🇸 España</option>
-      <option value="Cabo Verde">🇨🇻 Cabo Verde</option>
-      <option value="Bélgica">🇧🇪 Bélgica</option>
-      <option value="Egipto">🇪🇬 Egipto</option>
-      <option value="Arabia Saudita">🇸🇦 Arabia Saudita</option>
-      <option value="Uruguay">🇺🇾 Uruguay</option>
-      <option value="Irán">🇮🇷 Irán</option>
-      <option value="Nueva Zelanda">🇳🇿 Nueva Zelanda</option>
-      <option value="Francia">🇫🇷 Francia</option>
-      <option value="Senegal">🇸🇳 Senegal</option>
-      <option value="Irak">🇮🇶 Irak</option>
-      <option value="Noruega">🇳🇴 Noruega</option>
-      <option value="Argentina">🇦🇷 Argentina</option>
-      <option value="Argelia">🇩🇿 Argelia</option>
-      <option value="Austria">🇦🇹 Austria</option>
-      <option value="Jordania">🇯🇴 Jordania</option>
-      <option value="Portugal">🇵🇹 Portugal</option>
-      <option value="Rep. Dem. Congo">🇨🇩 Rep. Dem. Congo</option>
-      <option value="Uzbekistán">🇺🇿 Uzbekistán</option>
-      <option value="Colombia">🇨🇴 Colombia</option>
-      <option value="Inglaterra">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</option>
-      <option value="Croacia">🇭🇷 Croacia</option>
-      <option value="Ghana">🇬🇭 Ghana</option>
-      <option value="Panamá">🇵🇦 Panamá</option>
     </select>
     <input class="search-box" type="text" placeholder="🔍 Buscar jugador o país..." oninput="searchMatches(this.value)">
   </div>
 </div>
 
 <div class="main">
-  <div class="stats-bar">
-    <div class="stat-card"><div class="num">72</div><div class="lbl">Partidos</div></div>
-    <div class="stat-card"><div class="num">48</div><div class="lbl">Selecciones</div></div>
-    <div class="stat-card"><div class="num">12</div><div class="lbl">Grupos</div></div>
-    <div class="stat-card"><div class="num" id="shown-count">72</div><div class="lbl">Mostrando</div></div>
-  </div>
   <div id="matches-container"></div>
   <div id="no-results" class="no-results hidden">
     <div class="icon">🔭</div>
@@ -211,256 +195,60 @@
 </div>
 
 <script>
-const GC = {
-  A:'#f5c542',B:'#00c9b1',C:'#22c55e',D:'#e63946',
-  E:'#a78bfa',F:'#fb923c',G:'#38bdf8',H:'#f472b6',
-  I:'#4ade80',J:'#c084fc',K:'#fbbf24',L:'#34d399'
-};
+const GC = {A:'#f5c542',B:'#00c9b1',C:'#22c55e',D:'#e63946',E:'#a78bfa',F:'#fb923c',G:'#38bdf8',H:'#f472b6',I:'#4ade80',J:'#c084fc',K:'#fbbf24',L:'#34d399'};
 const OL = {h:'Local gana',d:'Empate',a:'Visitante gana'};
 const OC = {h:'outcome-h',d:'outcome-d',a:'outcome-a'};
-const DN = {
-  '2026-06-11':'Jueves 11 Jun','2026-06-12':'Viernes 12 Jun','2026-06-13':'Sábado 13 Jun',
-  '2026-06-14':'Domingo 14 Jun','2026-06-15':'Lunes 15 Jun','2026-06-16':'Martes 16 Jun',
-  '2026-06-17':'Miércoles 17 Jun','2026-06-18':'Jueves 18 Jun','2026-06-19':'Viernes 19 Jun',
-  '2026-06-20':'Sábado 20 Jun','2026-06-21':'Domingo 21 Jun','2026-06-22':'Lunes 22 Jun',
-  '2026-06-23':'Martes 23 Jun','2026-06-24':'Miércoles 24 Jun','2026-06-25':'Jueves 25 Jun',
-  '2026-06-26':'Viernes 26 Jun','2026-06-27':'Sábado 27 Jun'
-};
+const DN = {'2026-06-20':'Sábado 20 Jun','2026-06-21':'Domingo 21 Jun','2026-06-22':'Lunes 22 Jun','2026-06-23':'Martes 23 Jun','2026-06-24':'Miércoles 24 Jun','2026-06-25':'Jueves 25 Jun','2026-06-26':'Viernes 26 Jun','2026-06-27':'Sábado 27 Jun'};
 
 const matches = [
-// JUN 11
-{id:1,date:'2026-06-11',group:'A',home:'México',hf:'🇲🇽',away:'Sudáfrica',af:'🇿🇦',hs:2,as:0,venue:'Ciudad de México',out:'h',
- hkey:['Santiago Giménez (Feyenoord)','Edson Álvarez (West Ham)','Raúl Jiménez (Fulham)'],
- akey:['Lyle Foster (Burnley)','Teboho Mokoena (Sundowns)','Ronwen Williams (Sundowns)']},
-{id:2,date:'2026-06-11',group:'A',home:'Corea del Sur',hf:'🇰🇷',away:'Chequia',af:'🇨🇿',hs:1,as:1,venue:'Guadalajara',out:'d',
- hkey:['Son Heung-min (Spurs)','Lee Kang-in (PSG)','Kim Min-jae (Bayern)'],
- akey:['Patrik Schick (Leverkusen)','Tomáš Souček (West Ham)','Adam Hložek (Hoffenheim)']},
-// JUN 12
-{id:3,date:'2026-06-12',group:'B',home:'Canadá',hf:'🇨🇦',away:'Bosnia-Herz.',af:'🇧🇦',hs:2,as:1,venue:'Toronto',out:'h',
- hkey:['Alphonso Davies (Bayern)','Jonathan David (Lille)','Cyle Larin (Mallorca)'],
- akey:['Ermedin Demirović (Stuttgart)','Amar Dedić (Salzburg)','Sead Kolašinac (Atalanta)']},
-{id:4,date:'2026-06-12',group:'D',home:'EE.UU.',hf:'🇺🇸',away:'Paraguay',af:'🇵🇾',hs:2,as:0,venue:'Los Ángeles',out:'h',
- hkey:['Christian Pulisic (AC Milan)','Gio Reyna (Dortmund)','Weston McKennie (Juve)'],
- akey:['Miguel Almirón (Newcastle)','Diego Gómez (Inter Miami)','Julio Enciso (Brighton)']},
-// JUN 13
-{id:5,date:'2026-06-13',group:'B',home:'Qatar',hf:'🇶🇦',away:'Suiza',af:'🇨🇭',hs:0,as:2,venue:'Santa Clara',out:'a',
- hkey:['Akram Afif (Al-Sadd)','Almoez Ali (Al-Duhail)','Jassem Gaber (Al-Arabi)'],
- akey:['Granit Xhaka (Leverkusen)','Breel Embolo (Monaco)','Dan Ndoye (Bologna)']},
-{id:6,date:'2026-06-13',group:'C',home:'Brasil',hf:'🇧🇷',away:'Marruecos',af:'🇲🇦',hs:1,as:1,venue:'Nueva York/NJ',out:'d',
- hkey:['Vinicius Jr. (Real Madrid)','Raphinha (Barcelona)','Rodrygo (Real Madrid)'],
- akey:['Achraf Hakimi (PSG)','Brahim Díaz (Real Madrid)','Youssef En-Nesyri (Fenerbahçe)']},
-{id:7,date:'2026-06-13',group:'C',home:'Haití',hf:'🇭🇹',away:'Escocia',af:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',hs:0,as:2,venue:'Boston',out:'a',
- hkey:['Duckens Nazon (Kayserispor)','Jean-Ricner Bellegarde (Wolves)','Frantzdy Pierrot (Maccabi)'],
- akey:['Scott McTominay (Napoli)','Andy Robertson (Liverpool)','John McGinn (Aston Villa)']},
-{id:8,date:'2026-06-13',group:'D',home:'Australia',hf:'🇦🇺',away:'Turquía',af:'🇹🇷',hs:1,as:2,venue:'Kansas City',out:'a',
- hkey:['Mathew Leckie (Melbourne City)','Jackson Irvine (St. Pauli)','Harry Souttar (Sheffield Utd)'],
- akey:['Hakan Çalhanoğlu (Inter)','Arda Güler (Real Madrid)','Kerem Aktürkoğlu (Benfica)']},
-// JUN 14
-{id:9,date:'2026-06-14',group:'E',home:'Alemania',hf:'🇩🇪',away:'Curazao',af:'🇨🇼',hs:4,as:0,venue:'Atlanta',out:'h',
- hkey:['Kai Havertz (Arsenal)','Jamal Musiala (Bayern)','Florian Wirtz (Leverkusen)'],
- akey:['Leandro Bacuna (Groningen)','Juninho Bacuna (Al-Wehda)','Rangelo Janga (Nea Salamis)']},
-{id:10,date:'2026-06-14',group:'F',home:'Países Bajos',hf:'🇳🇱',away:'Japón',af:'🇯🇵',hs:2,as:1,venue:'Miami',out:'h',
- hkey:['Cody Gakpo (Liverpool)','Virgil van Dijk (Liverpool)','Xavi Simons (Leipzig)'],
- akey:['Takumi Minamino (Monaco)','Kaoru Mitoma (Brighton)','Wataru Endo (Liverpool)']},
-{id:11,date:'2026-06-14',group:'E',home:'Costa de Marfil',hf:'🇨🇮',away:'Ecuador',af:'🇪🇨',hs:1,as:2,venue:'Filadelfia',out:'a',
- hkey:['Sébastien Haller (Leganés)','Franck Kessié (Al-Ahli)','Simon Adingra (Brighton)'],
- akey:['Enner Valencia (Inter)','Moisés Caicedo (Chelsea)','Piero Hincapié (Leverkusen)']},
-{id:12,date:'2026-06-14',group:'F',home:'Suecia',hf:'🇸🇪',away:'Túnez',af:'🇹🇳',hs:2,as:0,venue:'Seattle',out:'h',
- hkey:['Viktor Gyökeres (Sporting CP)','Alexander Isak (Newcastle)','Dejan Kulusevski (Spurs)'],
- akey:['Hannibal Mejbri (Burnley)','Ellyes Skhiri (Frankfurt)','Montassar Talbi (Lorient)']},
-// JUN 15
-{id:13,date:'2026-06-15',group:'H',home:'España',hf:'🇪🇸',away:'Cabo Verde',af:'🇨🇻',hs:3,as:0,venue:'Guadalajara',out:'h',
- hkey:['Lamine Yamal (Barcelona)','Pedri (Barcelona)','Nico Williams (Athletic)'],
- akey:['Logan Costa (Villarreal)','Patrick Andrade (Qarabağ)','Jovane Cabral (Estrela)']},
-{id:14,date:'2026-06-15',group:'G',home:'Bélgica',hf:'🇧🇪',away:'Egipto',af:'🇪🇬',hs:2,as:1,venue:'Dallas',out:'h',
- hkey:['Kevin De Bruyne (Man City)','Jeremy Doku (Man City)','Lois Openda (Leipzig)'],
- akey:['Mohamed Salah (Liverpool)','Omar Marmoush (Frankfurt)','Mostafa Mohamed (Nantes)']},
-{id:15,date:'2026-06-15',group:'H',home:'Arabia Saudita',hf:'🇸🇦',away:'Uruguay',af:'🇺🇾',hs:0,as:2,venue:'Houston',out:'a',
- hkey:['Salem Al-Dawsari (Al-Hilal)','Firas Al-Buraikan (Al-Ahli)','Saud Abdulhamid (Roma)'],
- akey:['Darwin Núñez (Liverpool)','Federico Valverde (Real Madrid)','Rodrigo Bentancur (Spurs)']},
-{id:16,date:'2026-06-15',group:'G',home:'Irán',hf:'🇮🇷',away:'Nueva Zelanda',af:'🇳🇿',hs:2,as:0,venue:'Vancouver',out:'h',
- hkey:['Mehdi Taremi (Inter)','Sardar Azmoun (Shabab Al-Ahli)','Alireza Jahanbakhsh (Feyenoord)'],
- akey:['Chris Wood (Nottm Forest)','Liberato Cacace (Empoli)','Joe Bell (Viking)']},
-// JUN 16
-{id:17,date:'2026-06-16',group:'I',home:'Francia',hf:'🇫🇷',away:'Senegal',af:'🇸🇳',hs:2,as:1,venue:'Nueva York/NJ',out:'h',
- hkey:['Kylian Mbappé (Real Madrid)','Bradley Barcola (PSG)','William Saliba (Arsenal)'],
- akey:['Sadio Mané (Al-Nassr)','Nicolas Jackson (Chelsea)','Pape Matar Sarr (Spurs)']},
-{id:18,date:'2026-06-16',group:'I',home:'Irak',hf:'🇮🇶',away:'Noruega',af:'🇳🇴',hs:0,as:3,venue:'Boston',out:'a',
- hkey:['Aymen Hussein (Al-Khor)','Ali Jasim (Como)','Zidane Iqbal (Utrecht)'],
- akey:['Erling Haaland (Man City)','Martin Ødegaard (Arsenal)','Alexander Sørloth (Atlético)']},
-{id:19,date:'2026-06-16',group:'J',home:'Argentina',hf:'🇦🇷',away:'Argelia',af:'🇩🇿',hs:2,as:0,venue:'Kansas City',out:'h',
- hkey:['Lionel Messi (Inter Miami)','Julián Álvarez (Atlético)','Alexis Mac Allister (Liverpool)'],
- akey:['Amine Gouiri (Rennes)','Houssem Aouar (Al-Ittihad)','Rayan Aït-Nouri (Wolves)']},
-{id:20,date:'2026-06-16',group:'J',home:'Austria',hf:'🇦🇹',away:'Jordania',af:'🇯🇴',hs:2,as:0,venue:'Santa Clara',out:'h',
- hkey:['Marcel Sabitzer (Dortmund)','Christoph Baumgartner (Leipzig)','Konrad Laimer (Bayern)'],
- akey:['Mousa Al-Taamari (Montpellier)','Yazan Al-Naimat (Al-Arabi)','Yazeed Abulaila (Al-Hussein)']},
-// JUN 17
-{id:21,date:'2026-06-17',group:'K',home:'Portugal',hf:'🇵🇹',away:'Rep. Dem. Congo',af:'🇨🇩',hs:3,as:0,venue:'Houston',out:'h',
- hkey:['Bruno Fernandes (Man United)','Rafael Leão (AC Milan)','Vitinha (PSG)'],
- akey:['Chancel Mbemba (Marseille)','Yoane Wissa (Brentford)','Arthur Masuaku (Besiktas)']},
-{id:22,date:'2026-06-17',group:'L',home:'Inglaterra',hf:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',away:'Croacia',af:'🇭🇷',hs:2,as:0,venue:'Dallas',out:'h',
- hkey:['Harry Kane (Bayern)','Jude Bellingham (Real Madrid)','Bukayo Saka (Arsenal)'],
- akey:['Joško Gvardiol (Man City)','Mateo Kovačić (Man City)','Lovro Majer (Wolfsburg)']},
-{id:23,date:'2026-06-17',group:'L',home:'Ghana',hf:'🇬🇭',away:'Panamá',af:'🇵🇦',hs:1,as:0,venue:'Toronto',out:'h',
- hkey:['Mohammed Kudus (West Ham)','Inaki Williams (Athletic)','Antoine Semenyo (Bournemouth)'],
- akey:['Adalberto Carrasquilla (Houston)','José Córdoba (Norwich)','Michael Amir Murillo (Marseille)']},
-{id:24,date:'2026-06-17',group:'K',home:'Uzbekistán',hf:'🇺🇿',away:'Colombia',af:'🇨🇴',hs:0,as:2,venue:'Ciudad de México',out:'a',
- hkey:['Eldor Shomurodov (Roma)','Abbosbek Fayzullaev (CSKA Moscú)','Oston Urunov (Persepolis)'],
- akey:['James Rodríguez (Rayo Vallecano)','Luis Díaz (Liverpool)','Richard Ríos (Palmeiras)']},
-// JUN 18
-{id:25,date:'2026-06-18',group:'A',home:'Chequia',hf:'🇨🇿',away:'Sudáfrica',af:'🇿🇦',hs:2,as:1,venue:'Atlanta',out:'h',
- hkey:['Patrik Schick (Leverkusen)','Tomáš Souček (West Ham)','Ladislav Krejčí (Girona)'],
- akey:['Lyle Foster (Burnley)','Evidence Makgopa (Orlando Pirates)','Oswin Appollis (Polokwane)']},
-{id:26,date:'2026-06-18',group:'A',home:'México',hf:'🇲🇽',away:'Corea del Sur',af:'🇰🇷',hs:1,as:1,venue:'Guadalajara',out:'d',
- hkey:['Santiago Giménez (Feyenoord)','Johan Vásquez (Genoa)','Edson Álvarez (West Ham)'],
- akey:['Son Heung-min (Spurs)','Hwang Hee-chan (Wolves)','Lee Kang-in (PSG)']},
-{id:27,date:'2026-06-18',group:'B',home:'Canadá',hf:'🇨🇦',away:'Qatar',af:'🇶🇦',hs:2,as:0,venue:'Vancouver',out:'h',
- hkey:['Jonathan David (Lille)','Alphonso Davies (Bayern)','Tajon Buchanan (Inter)'],
- akey:['Akram Afif (Al-Sadd)','Almoez Ali (Al-Duhail)','Jassem Gaber (Al-Arabi)']},
-{id:28,date:'2026-06-18',group:'B',home:'Bosnia-Herz.',hf:'🇧🇦',away:'Suiza',af:'🇨🇭',hs:0,as:1,venue:'Seattle',out:'a',
- hkey:['Ermedin Demirović (Stuttgart)','Anel Ahmedhodžić (Sheffield)','Amar Dedić (Salzburg)'],
- akey:['Granit Xhaka (Leverkusen)','Manuel Akanji (Man City)','Breel Embolo (Monaco)']},
-// JUN 19
-{id:29,date:'2026-06-19',group:'C',home:'Brasil',hf:'🇧🇷',away:'Haití',af:'🇭🇹',hs:3,as:0,venue:'Filadelfia',out:'h',
- hkey:['Vinicius Jr. (Real Madrid)','Endrick (Real Madrid)','Lucas Paquetá (West Ham)'],
- akey:['Duckens Nazon (Kayserispor)','Jean-Ricner Bellegarde (Wolves)','Frantzdy Pierrot (Maccabi)']},
-{id:30,date:'2026-06-19',group:'C',home:'Escocia',hf:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',away:'Marruecos',af:'🇲🇦',hs:1,as:2,venue:'Atlanta',out:'a',
- hkey:['Scott McTominay (Napoli)','Andy Robertson (Liverpool)','Che Adams (Torino)'],
- akey:['Achraf Hakimi (PSG)','Brahim Díaz (Real Madrid)','Sofyan Amrabat (Fenerbahçe)']},
-{id:31,date:'2026-06-19',group:'D',home:'EE.UU.',hf:'🇺🇸',away:'Australia',af:'🇦🇺',hs:2,as:0,venue:'San Francisco',out:'h',
- hkey:['Christian Pulisic (AC Milan)','Folarin Balogun (Monaco)','Tyler Adams (Bournemouth)'],
- akey:['Mathew Leckie (Melbourne)','Jackson Irvine (St. Pauli)','Nestory Irankunda (Bayern)']},
-{id:32,date:'2026-06-19',group:'D',home:'Turquía',hf:'🇹🇷',away:'Paraguay',af:'🇵🇾',hs:1,as:1,venue:'Dallas',out:'d',
- hkey:['Hakan Çalhanoğlu (Inter)','Arda Güler (Real Madrid)','Kenan Yıldız (Juve)'],
- akey:['Miguel Almirón (Newcastle)','Diego Gómez (Inter Miami)','Julio Enciso (Brighton)']},
 // JUN 20
-{id:33,date:'2026-06-20',group:'F',home:'Alemania',hf:'🇩🇪',away:'Japón',af:'🇯🇵',hs:2,as:1,venue:'Dallas',out:'h',
- hkey:['Kai Havertz (Arsenal)','Florian Wirtz (Leverkusen)','Leroy Sané (Bayern)'],
- akey:['Takumi Minamino (Monaco)','Kaoru Mitoma (Brighton)','Takefusa Kubo (Real Sociedad)']},
-{id:34,date:'2026-06-20',group:'E',home:'Países Bajos',hf:'🇳🇱',away:'Curazao',af:'🇨🇼',hs:4,as:0,venue:'Houston',out:'h',
- hkey:['Cody Gakpo (Liverpool)','Donyell Malen (Dortmund)','Jeremie Frimpong (Leverkusen)'],
- akey:['Leandro Bacuna (Groningen)','Jürgen Locadia (Intercity)','Shayne Pattynama (Al-Tai)']},
-{id:35,date:'2026-06-20',group:'F',home:'Ecuador',hf:'🇪🇨',away:'Suecia',af:'🇸🇪',hs:1,as:1,venue:'Los Ángeles',out:'d',
- hkey:['Enner Valencia (Inter)','Moisés Caicedo (Chelsea)','Kendry Páez (Independiente)'],
- akey:['Viktor Gyökeres (Sporting CP)','Alexander Isak (Newcastle)','Lucas Bergvall (Spurs)']},
-{id:36,date:'2026-06-20',group:'F',home:'Túnez',hf:'🇹🇳',away:'Costa de Marfil',af:'🇨🇮',hs:0,as:2,venue:'Kansas City',out:'a',
- hkey:['Hannibal Mejbri (Burnley)','Aïssa Laïdouni (Al-Wakrah)','Ellyes Skhiri (Frankfurt)'],
- akey:['Sébastien Haller (Leganés)','Franck Kessié (Al-Ahli)','Ousmane Diomande (Sporting CP)']},
+{id:33,date:'2026-06-20',group:'F',home:'Países Bajos',hf:'🇳🇱',away:'Suecia',af:'🇸🇪',hs:2,as:1,venue:'Houston',out:'h',hkey:['Cody Gakpo','Virgil van Dijk','Xavi Simons'],akey:['Viktor Gyökeres','Alexander Isak','Dejan Kulusevski']},
+{id:34,date:'2026-06-20',group:'E',home:'Alemania',hf:'🇩🇪',away:'Costa de Marfil',af:'🇨🇮',hs:2,as:0,venue:'Toronto',out:'h',hkey:['Kai Havertz','Jamal Musiala','Florian Wirtz'],akey:['Sébastien Haller','Franck Kessié','Simon Adingra']},
+{id:35,date:'2026-06-20',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Curazao',af:'🇨🇼',hs:2,as:0,venue:'Kansas City',out:'h',hkey:['Enner Valencia','Moisés Caicedo','Piero Hincapié'],akey:['Leandro Bacuna','Juninho Bacuna','Rangelo Janga']},
+{id:36,date:'2026-06-20',group:'F',home:'Túnez',hf:'🇹🇳',away:'Japón',af:'🇯🇵',hs:1,as:2,venue:'Monterrey',out:'a',hkey:['Hannibal Mejbri','Ellyes Skhiri','Montassar Talbi'],akey:['Takumi Minamino','Kaoru Mitoma','Wataru Endo']},
 // JUN 21
-{id:37,date:'2026-06-21',group:'G',home:'Bélgica',hf:'🇧🇪',away:'Nueva Zelanda',af:'🇳🇿',hs:3,as:0,venue:'Boston',out:'h',
- hkey:['Kevin De Bruyne (Man City)','Leandro Trossard (Arsenal)','Amadou Onana (Aston Villa)'],
- akey:['Chris Wood (Nottm Forest)','Joe Bell (Viking)','Liberato Cacace (Empoli)']},
-{id:38,date:'2026-06-21',group:'G',home:'Irán',hf:'🇮🇷',away:'Egipto',af:'🇪🇬',hs:1,as:1,venue:'Seattle',out:'d',
- hkey:['Mehdi Taremi (Inter)','Sardar Azmoun (Shabab)','Saman Ghoddos (Kalba)'],
- akey:['Mohamed Salah (Liverpool)','Omar Marmoush (Frankfurt)','Trezeguet (Al-Rayyan)']},
-{id:39,date:'2026-06-21',group:'H',home:'España',hf:'🇪🇸',away:'Arabia Saudita',af:'🇸🇦',hs:2,as:0,venue:'Santa Clara',out:'h',
- hkey:['Lamine Yamal (Barcelona)','Dani Olmo (Barcelona)','Rodri (Man City)'],
- akey:['Salem Al-Dawsari (Al-Hilal)','Firas Al-Buraikan (Al-Ahli)','Saud Abdulhamid (Roma)']},
-{id:40,date:'2026-06-21',group:'H',home:'Uruguay',hf:'🇺🇾',away:'Cabo Verde',af:'🇨🇻',hs:2,as:0,venue:'Miami',out:'h',
- hkey:['Darwin Núñez (Liverpool)','Federico Valverde (Real Madrid)','Manuel Ugarte (Man United)'],
- akey:['Logan Costa (Villarreal)','Patrick Andrade (Qarabağ)','Jovane Cabral (Estrela)']},
+{id:37,date:'2026-06-21',group:'H',home:'España',hf:'🇪🇸',away:'Arabia Saudí',af:'🇸🇦',hs:3,as:0,venue:'Atlanta',out:'h',hkey:['Lamine Yamal','Pedri','Nico Williams'],akey:['Salem Al-Dawsari','Firas Al-Buraikan','Saud Abdulhamid']},
+{id:38,date:'2026-06-21',group:'G',home:'Bélgica',hf:'🇧🇪',away:'Irán',af:'🇮🇷',hs:2,as:1,venue:'Los Ángeles',out:'h',hkey:['Kevin De Bruyne','Jeremy Doku','Lois Openda'],akey:['Mehdi Taremi','Sardar Azmoun','Alireza Jahanbakhsh']},
+{id:39,date:'2026-06-21',group:'H',home:'Uruguay',hf:'🇺🇾',away:'Cabo Verde',af:'🇨🇻',hs:2,as:0,venue:'Miami',out:'h',hkey:['Darwin Núñez','Federico Valverde','Rodrigo Bentancur'],akey:['Logan Costa','Patrick Andrade','Jovane Cabral']},
+{id:40,date:'2026-06-21',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Egipto',af:'🇪🇬',hs:1,as:2,venue:'Vancouver',out:'a',hkey:['Chris Wood','Liberato Cacace','Joe Bell'],akey:['Mohamed Salah','Omar Marmoush','Mostafa Mohamed']},
 // JUN 22
-{id:41,date:'2026-06-22',group:'J',home:'Argentina',hf:'🇦🇷',away:'Austria',af:'🇦🇹',hs:1,as:1,venue:'Dallas',out:'d',
- hkey:['Lionel Messi (Inter Miami)','Lautaro Martínez (Inter)','Enzo Fernández (Chelsea)'],
- akey:['Marcel Sabitzer (Dortmund)','Christoph Baumgartner (Leipzig)','Stefan Posch (Bologna)']},
-{id:42,date:'2026-06-22',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argelia',af:'🇩🇿',hs:0,as:2,venue:'Santa Clara',out:'a',
- hkey:['Mousa Al-Taamari (Montpellier)','Yazan Al-Naimat (Al-Arabi)','Ali Olwan (Selangor)'],
- akey:['Amine Gouiri (Rennes)','Rayan Aït-Nouri (Wolves)','Ismaël Bennacer (AC Milan)']},
-{id:43,date:'2026-06-22',group:'I',home:'Francia',hf:'🇫🇷',away:'Irak',af:'🇮🇶',hs:3,as:0,venue:'Filadelfia',out:'h',
- hkey:['Kylian Mbappé (Real Madrid)','Ousmane Dembélé (PSG)','Aurélien Tchouaméni (Real Madrid)'],
- akey:['Aymen Hussein (Al-Khor)','Ali Jasim (Como)','Zidane Iqbal (Utrecht)']},
-{id:44,date:'2026-06-22',group:'I',home:'Noruega',hf:'🇳🇴',away:'Senegal',af:'🇸🇳',hs:1,as:2,venue:'Nueva York/NJ',out:'a',
- hkey:['Erling Haaland (Man City)','Martin Ødegaard (Arsenal)','Sander Berge (Fulham)'],
- akey:['Nicolas Jackson (Chelsea)','Pape Matar Sarr (Spurs)','Kalidou Koulibaly (Al-Hilal)']},
+{id:41,date:'2026-06-22',group:'J',home:'Argentina',hf:'🇦🇷',away:'Austria',af:'🇦🇹',hs:2,as:1,venue:'Dallas',out:'h',hkey:['Lionel Messi','Julián Álvarez','Alexis Mac Allister'],akey:['Marcel Sabitzer','Christoph Baumgartner','Konrad Laimer']},
+{id:42,date:'2026-06-22',group:'I',home:'Francia',hf:'🇫🇷',away:'Irak',af:'🇮🇶',hs:3,as:0,venue:'Filadelfia',out:'h',hkey:['Kylian Mbappé','Bradley Barcola','William Saliba'],akey:['Aymen Hussein','Ali Jasim','Zidane Iqbal']},
+{id:43,date:'2026-06-22',group:'I',home:'Noruega',hf:'🇳🇴',away:'Senegal',af:'🇸🇳',hs:1,as:2,venue:'Nueva York/NJ',out:'a',hkey:['Erling Haaland','Martin Ødegaard','Alexander Sørloth'],akey:['Sadio Mané','Nicolas Jackson','Pape Matar Sarr']},
+{id:44,date:'2026-06-22',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argelia',af:'🇩🇿',hs:0,as:2,venue:'Bahía de SF',out:'a',hkey:['Mousa Al-Taamari','Yazan Al-Naimat','Yazeed Abulaila'],akey:['Amine Gouiri','Houssem Aouar','Rayan Aït-Nouri']},
 // JUN 23
-{id:45,date:'2026-06-23',group:'K',home:'Portugal',hf:'🇵🇹',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Houston',out:'h',
- hkey:['Bruno Fernandes (Man United)','Rafael Leão (AC Milan)','Bernardo Silva (Man City)'],
- akey:['Eldor Shomurodov (Roma)','Abbosbek Fayzullaev (CSKA M.)','Husniddin Aliqulov (Rizespor)']},
-{id:46,date:'2026-06-23',group:'K',home:'Colombia',hf:'🇨🇴',away:'Rep. Dem. Congo',af:'🇨🇩',hs:2,as:0,venue:'Los Ángeles',out:'h',
- hkey:['James Rodríguez (Rayo Vallecano)','Luis Díaz (Liverpool)','Jhon Arias (Fluminense)'],
- akey:['Yoane Wissa (Brentford)','Chancel Mbemba (Marseille)','Simon Banza (Trabzonspor)']},
-{id:47,date:'2026-06-23',group:'L',home:'Inglaterra',hf:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',away:'Ghana',af:'🇬🇭',hs:2,as:0,venue:'Boston',out:'h',
- hkey:['Harry Kane (Bayern)','Phil Foden (Man City)','Cole Palmer (Chelsea)'],
- akey:['Mohammed Kudus (West Ham)','Thomas Partey (Arsenal)','Inaki Williams (Athletic)']},
-{id:48,date:'2026-06-23',group:'L',home:'Croacia',hf:'🇭🇷',away:'Panamá',af:'🇵🇦',hs:1,as:0,venue:'Kansas City',out:'h',
- hkey:['Joško Gvardiol (Man City)','Mateo Kovačić (Man City)','Andrej Kramarić (Hoffenheim)'],
- akey:['Adalberto Carrasquilla (Houston)','José Córdoba (Norwich)','César Blackman (Slovan)']},
+{id:45,date:'2026-06-23',group:'K',home:'Portugal',hf:'🇵🇹',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Houston',out:'h',hkey:['Bruno Fernandes','Rafael Leão','Vitinha'],akey:['Eldor Shomurodov','Abbosbek Fayzullaev','Oston Urunov']},
+{id:46,date:'2026-06-23',group:'L',home:'Inglaterra',hf:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',away:'Ghana',af:'🇬🇭',hs:2,as:0,venue:'Boston',out:'h',hkey:['Harry Kane','Jude Bellingham','Bukayo Saka'],akey:['Mohammed Kudus','Inaki Williams','Antoine Semenyo']},
+{id:47,date:'2026-06-23',group:'L',home:'Panamá',hf:'🇵🇦',away:'Croacia',af:'🇭🇷',hs:0,as:2,venue:'Toronto',out:'a',hkey:['Adalberto Carrasquilla','José Córdoba','Michael Amir Murillo'],akey:['Joško Gvardiol','Mateo Kovačić','Lovro Majer']},
+{id:48,date:'2026-06-23',group:'K',home:'Colombia',hf:'🇨🇴',away:'RD Congo',af:'🇨🇩',hs:2,as:1,venue:'Guadalajara',out:'h',hkey:['James Rodríguez','Luis Díaz','Richard Ríos'],akey:['Chancel Mbemba','Yoane Wissa','Arthur Masuaku']},
 // JUN 24
-{id:49,date:'2026-06-24',group:'A',home:'Sudáfrica',hf:'🇿🇦',away:'Corea del Sur',af:'🇰🇷',hs:0,as:2,venue:'Miami',out:'a',
- hkey:['Lyle Foster (Burnley)','Teboho Mokoena (Sundowns)','Oswin Appollis (Polokwane)'],
- akey:['Son Heung-min (Spurs)','Hwang Hee-chan (Wolves)','Kim Min-jae (Bayern)']},
-{id:50,date:'2026-06-24',group:'A',home:'Chequia',hf:'🇨🇿',away:'México',af:'🇲🇽',hs:1,as:1,venue:'Boston',out:'d',
- hkey:['Patrik Schick (Leverkusen)','Adam Hložek (Hoffenheim)','Tomáš Souček (West Ham)'],
- akey:['Santiago Giménez (Feyenoord)','Julián Quiñones (Al-Qadisiyah)','Edson Álvarez (West Ham)']},
-{id:51,date:'2026-06-24',group:'B',home:'Suiza',hf:'🇨🇭',away:'Canadá',af:'🇨🇦',hs:1,as:2,venue:'Toronto',out:'a',
- hkey:['Granit Xhaka (Leverkusen)','Manuel Akanji (Man City)','Fabian Schär (Newcastle)'],
- akey:['Alphonso Davies (Bayern)','Jonathan David (Lille)','Stephen Eustáquio (Porto)']},
-{id:52,date:'2026-06-24',group:'B',home:'Qatar',hf:'🇶🇦',away:'Bosnia-Herz.',af:'🇧🇦',hs:0,as:1,venue:'Los Ángeles',out:'a',
- hkey:['Akram Afif (Al-Sadd)','Almoez Ali (Al-Duhail)','Jassem Gaber (Al-Arabi)'],
- akey:['Ermedin Demirović (Stuttgart)','Amar Dedić (Salzburg)','Rade Krunić (Fenerbahçe)']},
+{id:49,date:'2026-06-24',group:'B',home:'Suiza',hf:'🇨🇭',away:'Canadá',af:'🇨🇦',hs:1,as:1,venue:'Vancouver',out:'d',hkey:['Granit Xhaka','Breel Embolo','Dan Ndoye'],akey:['Alphonso Davies','Jonathan David','Cyle Larin']},
+{id:50,date:'2026-06-24',group:'B',home:'Bosnia y Herzegovina',hf:'🇧🇦',away:'Catar',af:'🇶🇦',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Ermedin Demirović','Amar Dedić','Sead Kolašinac'],akey:['Akram Afif','Almoez Ali','Jassem Gaber']},
+{id:51,date:'2026-06-24',group:'C',home:'Escocia',hf:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',away:'Brasil',af:'🇧🇷',hs:0,as:3,venue:'Miami',out:'a',hkey:['Scott McTominay','Andy Robertson','John McGinn'],akey:['Vinicius Jr.','Raphinha','Rodrygo']},
+{id:52,date:'2026-06-24',group:'C',home:'Marruecos',hf:'🇲🇦',away:'Haití',af:'🇭🇹',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Achraf Hakimi','Brahim Díaz','Youssef En-Nesyri'],akey:['Duckens Nazon','Jean-Ricner Bellegarde','Frantzdy Pierrot']},
+{id:53,date:'2026-06-24',group:'A',home:'República Checa',hf:'🇨🇿',away:'México',af:'🇲🇽',hs:1,as:1,venue:'Ciudad de México',out:'d',hkey:['Patrik Schick','Tomáš Souček','Adam Hložek'],akey:['Santiago Giménez','Edson Álvarez','Raúl Jiménez']},
+{id:54,date:'2026-06-24',group:'A',home:'Sudáfrica',hf:'🇿🇦',away:'República de Corea',af:'🇰🇷',hs:0,as:2,venue:'Monterrey',out:'a',hkey:['Lyle Foster','Teboho Mokoena','Ronwen Williams'],akey:['Son Heung-min','Lee Kang-in','Kim Min-jae']},
 // JUN 25
-{id:53,date:'2026-06-25',group:'C',home:'Marruecos',hf:'🇲🇦',away:'Haití',af:'🇭🇹',hs:3,as:0,venue:'Dallas',out:'h',
- hkey:['Achraf Hakimi (PSG)','Brahim Díaz (Real Madrid)','Amine Adli (Leverkusen)'],
- akey:['Duckens Nazon (Kayserispor)','Jean-Ricner Bellegarde (Wolves)','Danley Jean Jacques (Metz)']},
-{id:54,date:'2026-06-25',group:'C',home:'Escocia',hf:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',away:'Brasil',af:'🇧🇷',hs:0,as:2,venue:'San Francisco',out:'a',
- hkey:['Scott McTominay (Napoli)','Andy Robertson (Liverpool)','Che Adams (Torino)'],
- akey:['Vinicius Jr. (Real Madrid)','Rodrygo (Real Madrid)','Lucas Paquetá (West Ham)']},
-{id:55,date:'2026-06-25',group:'D',home:'Paraguay',hf:'🇵🇾',away:'Australia',af:'🇦🇺',hs:1,as:0,venue:'Houston',out:'h',
- hkey:['Miguel Almirón (Newcastle)','Diego Gómez (Inter Miami)','Julio Enciso (Brighton)'],
- akey:['Mathew Leckie (Melbourne)','Nestory Irankunda (Bayern)','Harry Souttar (Sheffield)']},
-{id:56,date:'2026-06-25',group:'D',home:'EE.UU.',hf:'🇺🇸',away:'Turquía',af:'🇹🇷',hs:2,as:2,venue:'Filadelfia',out:'d',
- hkey:['Christian Pulisic (AC Milan)','Weston McKennie (Juve)','Timothy Weah (Juve)'],
- akey:['Hakan Çalhanoğlu (Inter)','Arda Güler (Real Madrid)','Kenan Yıldız (Juve)']},
-{id:57,date:'2026-06-25',group:'E',home:'Curazao',hf:'🇨🇼',away:'Japón',af:'🇯🇵',hs:0,as:3,venue:'Filadelfia',out:'a',
- hkey:['Leandro Bacuna (Groningen)','Jurien Gaari (Al-Hazem)','Kenji Gorré (Boavista)'],
- akey:['Kaoru Mitoma (Brighton)','Takumi Minamino (Monaco)','Takefusa Kubo (Real Sociedad)']},
-{id:58,date:'2026-06-25',group:'E',home:'Alemania',hf:'🇩🇪',away:'Costa de Marfil',af:'🇨🇮',hs:2,as:0,venue:'Los Ángeles',out:'h',
- hkey:['Kai Havertz (Arsenal)','Florian Wirtz (Leverkusen)','Jamal Musiala (Bayern)'],
- akey:['Sébastien Haller (Leganés)','Franck Kessié (Al-Ahli)','Simon Adingra (Brighton)']},
-{id:59,date:'2026-06-25',group:'F',home:'Suecia',hf:'🇸🇪',away:'Países Bajos',af:'🇳🇱',hs:1,as:2,venue:'Seattle',out:'a',
- hkey:['Viktor Gyökeres (Sporting CP)','Alexander Isak (Newcastle)','Dejan Kulusevski (Spurs)'],
- akey:['Cody Gakpo (Liverpool)','Xavi Simons (Leipzig)','Virgil van Dijk (Liverpool)']},
-{id:60,date:'2026-06-25',group:'F',home:'Túnez',hf:'🇹🇳',away:'Ecuador',af:'🇪🇨',hs:0,as:1,venue:'Vancouver',out:'a',
- hkey:['Hannibal Mejbri (Burnley)','Ellyes Skhiri (Frankfurt)','Montassar Talbi (Lorient)'],
- akey:['Moisés Caicedo (Chelsea)','Enner Valencia (Inter)','Willian Pacho (PSG)']},
+{id:55,date:'2026-06-25',group:'E',home:'Curazao',hf:'🇨🇼',away:'Costa de Marfil',af:'🇨🇮',hs:0,as:2,venue:'Filadelfia',out:'a',hkey:['Leandro Bacuna','Juninho Bacuna'],akey:['Sébastien Haller','Franck Kessié']},
+{id:56,date:'2026-06-25',group:'E',home:'Ecuador',hf:'🇪🇨',away:'Alemania',af:'🇩🇪',hs:0,as:3,venue:'Nueva York/NJ',out:'a',hkey:['Enner Valencia','Moisés Caicedo'],akey:['Kai Havertz','Jamal Musiala']},
+{id:57,date:'2026-06-25',group:'F',home:'Japón',hf:'🇯🇵',away:'Suecia',af:'🇸🇪',hs:1,as:1,venue:'Dallas',out:'d',hkey:['Takumi Minamino','Kaoru Mitoma'],akey:['Viktor Gyökeres','Alexander Isak']},
+{id:58,date:'2026-06-25',group:'F',home:'Túnez',hf:'🇹🇳',away:'Países Bajos',af:'🇳🇱',hs:0,as:2,venue:'Kansas City',out:'a',hkey:['Hannibal Mejbri','Ellyes Skhiri'],akey:['Cody Gakpo','Virgil van Dijk']},
+{id:59,date:'2026-06-25',group:'D',home:'Turquía',hf:'🇹🇷',away:'Estados Unidos',af:'🇺🇸',hs:1,as:2,venue:'Los Ángeles',out:'a',hkey:['Hakan Çalhanoğlu','Arda Güler'],akey:['Christian Pulisic','Gio Reyna']},
+{id:60,date:'2026-06-25',group:'D',home:'Paraguay',hf:'🇵🇾',away:'Australia',af:'🇦🇺',hs:1,as:0,venue:'Bahía de SF',out:'h',hkey:['Miguel Almirón','Diego Gómez'],akey:['Mathew Leckie','Jackson Irvine']},
 // JUN 26
-{id:61,date:'2026-06-26',group:'I',home:'Noruega',hf:'🇳🇴',away:'Francia',af:'🇫🇷',hs:1,as:2,venue:'Boston',out:'a',
- hkey:['Erling Haaland (Man City)','Martin Ødegaard (Arsenal)','Jørgen Strand Larsen (Wolves)'],
- akey:['Kylian Mbappé (Real Madrid)','Bradley Barcola (PSG)','William Saliba (Arsenal)']},
-{id:62,date:'2026-06-26',group:'I',home:'Senegal',hf:'🇸🇳',away:'Irak',af:'🇮🇶',hs:2,as:0,venue:'Toronto',out:'h',
- hkey:['Sadio Mané (Al-Nassr)','Nicolas Jackson (Chelsea)','Pape Matar Sarr (Spurs)'],
- akey:['Aymen Hussein (Al-Khor)','Ali Jasim (Como)','Hussein Ali (Heerenveen)']},
-{id:63,date:'2026-06-26',group:'H',home:'Cabo Verde',hf:'🇨🇻',away:'Arabia Saudita',af:'🇸🇦',hs:1,as:1,venue:'Houston',out:'d',
- hkey:['Logan Costa (Villarreal)','Patrick Andrade (Qarabağ)','Jovane Cabral (Estrela)'],
- akey:['Salem Al-Dawsari (Al-Hilal)','Firas Al-Buraikan (Al-Ahli)','Saud Abdulhamid (Roma)']},
-{id:64,date:'2026-06-26',group:'H',home:'Uruguay',hf:'🇺🇾',away:'España',af:'🇪🇸',hs:1,as:1,venue:'Guadalajara',out:'d',
- hkey:['Darwin Núñez (Liverpool)','Federico Valverde (Real Madrid)','Ronald Araújo (Barcelona)'],
- akey:['Lamine Yamal (Barcelona)','Nico Williams (Athletic)','Pedri (Barcelona)']},
-{id:65,date:'2026-06-26',group:'G',home:'Egipto',hf:'🇪🇬',away:'Irán',af:'🇮🇷',hs:1,as:0,venue:'Seattle',out:'h',
- hkey:['Mohamed Salah (Liverpool)','Omar Marmoush (Frankfurt)','Mostafa Mohamed (Nantes)'],
- akey:['Mehdi Taremi (Inter)','Sardar Azmoun (Shabab)','Saman Ghoddos (Kalba)']},
-{id:66,date:'2026-06-26',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Bélgica',af:'🇧🇪',hs:0,as:3,venue:'Vancouver',out:'a',
- hkey:['Chris Wood (Nottm Forest)','Liberato Cacace (Empoli)','Matthew Garbett (Breda)'],
- akey:['Kevin De Bruyne (Man City)','Jeremy Doku (Man City)','Leandro Trossard (Arsenal)']},
+{id:61,date:'2026-06-26',group:'I',home:'Noruega',hf:'🇳🇴',away:'Francia',af:'🇫🇷',hs:1,as:2,venue:'Boston',out:'a',hkey:['Erling Haaland','Martin Ødegaard'],akey:['Kylian Mbappé','Bradley Barcola']},
+{id:62,date:'2026-06-26',group:'I',home:'Senegal',hf:'🇸🇳',away:'Irak',af:'🇮🇶',hs:2,as:1,venue:'Toronto',out:'h',hkey:['Sadio Mané','Nicolas Jackson'],akey:['Aymen Hussein','Ali Jasim']},
+{id:63,date:'2026-06-26',group:'H',home:'Cabo Verde',hf:'🇨🇻',away:'Arabia Saudí',af:'🇸🇦',hs:1,as:1,venue:'Houston',out:'d',hkey:['Logan Costa','Patrick Andrade'],akey:['Salem Al-Dawsari','Firas Al-Buraikan']},
+{id:64,date:'2026-06-26',group:'H',home:'Uruguay',hf:'🇺🇾',away:'España',af:'🇪🇸',hs:1,as:1,venue:'Guadalajara',out:'d',hkey:['Darwin Núñez','Federico Valverde'],akey:['Lamine Yamal','Nico Williams']},
+{id:65,date:'2026-06-26',group:'G',home:'Egipto',hf:'🇪🇬',away:'Irán',af:'🇮🇷',hs:1,as:0,venue:'Seattle',out:'h',hkey:['Mohamed Salah','Omar Marmoush'],akey:['Mehdi Taremi','Sardar Azmoun']},
+{id:66,date:'2026-06-26',group:'G',home:'Nueva Zelanda',hf:'🇳🇿',away:'Bélgica',af:'🇧🇪',hs:0,as:3,venue:'Vancouver',out:'a',hkey:['Chris Wood','Liberato Cacace'],akey:['Kevin De Bruyne','Jeremy Doku']},
 // JUN 27
-{id:67,date:'2026-06-27',group:'L',home:'Panamá',hf:'🇵🇦',away:'Inglaterra',af:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',hs:0,as:3,venue:'Nueva York/NJ',out:'a',
- hkey:['Adalberto Carrasquilla (Houston)','José Córdoba (Norwich)','César Blackman (Slovan)'],
- akey:['Harry Kane (Bayern)','Jude Bellingham (Real Madrid)','Cole Palmer (Chelsea)']},
-{id:68,date:'2026-06-27',group:'L',home:'Croacia',hf:'🇭🇷',away:'Ghana',af:'🇬🇭',hs:1,as:1,venue:'Filadelfia',out:'d',
- hkey:['Joško Gvardiol (Man City)','Mateo Kovačić (Man City)','Lovro Majer (Wolfsburg)'],
- akey:['Mohammed Kudus (West Ham)','Thomas Partey (Arsenal)','Inaki Williams (Athletic)']},
-{id:69,date:'2026-06-27',group:'K',home:'Colombia',hf:'🇨🇴',away:'Portugal',af:'🇵🇹',hs:1,as:1,venue:'Miami',out:'d',
- hkey:['James Rodríguez (Rayo Vallecano)','Luis Díaz (Liverpool)','Richard Ríos (Palmeiras)'],
- akey:['Bruno Fernandes (Man United)','Rafael Leão (AC Milan)','Vitinha (PSG)']},
-{id:70,date:'2026-06-27',group:'K',home:'Rep. Dem. Congo',hf:'🇨🇩',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Atlanta',out:'h',
- hkey:['Yoane Wissa (Brentford)','Chancel Mbemba (Marseille)','Arthur Masuaku (Besiktas)'],
- akey:['Eldor Shomurodov (Roma)','Abbosbek Fayzullaev (CSKA M.)','Otabek Shukurov (Fayha)']},
-{id:71,date:'2026-06-27',group:'J',home:'Argelia',hf:'🇩🇿',away:'Austria',af:'🇦🇹',hs:1,as:2,venue:'Kansas City',out:'a',
- hkey:['Amine Gouiri (Rennes)','Houssem Aouar (Al-Ittihad)','Rayan Aït-Nouri (Wolves)'],
- akey:['Marcel Sabitzer (Dortmund)','Christoph Baumgartner (Leipzig)','Konrad Laimer (Bayern)']},
-{id:72,date:'2026-06-27',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argentina',af:'🇦🇷',hs:0,as:3,venue:'Dallas',out:'a',
- hkey:['Mousa Al-Taamari (Montpellier)','Yazan Al-Naimat (Al-Arabi)','Yazeed Abulaila (Al-Hussein)'],
- akey:['Lionel Messi (Inter Miami)','Julián Álvarez (Atlético)','Alexis Mac Allister (Liverpool)']}
+{id:67,date:'2026-06-27',group:'L',home:'Panamá',hf:'🇵🇦',away:'Inglaterra',af:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',hs:0,as:3,venue:'Nueva York/NJ',out:'a',hkey:['Adalberto Carrasquilla','José Córdoba'],akey:['Harry Kane','Jude Bellingham']},
+{id:68,date:'2026-06-27',group:'L',home:'Croacia',hf:'🇭🇷',away:'Ghana',af:'🇬🇭',hs:1,as:1,venue:'Filadelfia',out:'d',hkey:['Joško Gvardiol','Mateo Kovačić'],akey:['Mohammed Kudus','Inaki Williams']},
+{id:69,date:'2026-06-27',group:'K',home:'Colombia',hf:'🇨🇴',away:'Portugal',af:'🇵🇹',hs:1,as:1,venue:'Miami',out:'d',hkey:['James Rodríguez','Luis Díaz'],akey:['Bruno Fernandes','Rafael Leão']},
+{id:70,date:'2026-06-27',group:'K',home:'RD Congo',hf:'🇨🇩',away:'Uzbekistán',af:'🇺🇿',hs:2,as:0,venue:'Atlanta',out:'h',hkey:['Yoane Wissa','Chancel Mbemba'],akey:['Eldor Shomurodov','Abbosbek Fayzullaev']},
+{id:71,date:'2026-06-27',group:'J',home:'Argelia',hf:'🇩🇿',away:'Austria',af:'🇦🇹',hs:1,as:2,venue:'Kansas City',out:'a',hkey:['Amine Gouiri','Houssem Aouar'],akey:['Marcel Sabitzer','Christoph Baumgartner']},
+{id:72,date:'2026-06-27',group:'J',home:'Jordania',hf:'🇯🇴',away:'Argentina',af:'🇦🇷',hs:0,as:3,venue:'Dallas',out:'a',hkey:['Mousa Al-Taamari','Yazan Al-Naimat'],akey:['Lionel Messi','Julián Álvarez']}
 ];
 
 let currentDay='all', currentGroup='', currentCountry='', currentSearch='';
@@ -469,7 +257,6 @@ function renderMatches(filtered){
   const container=document.getElementById('matches-container');
   const noRes=document.getElementById('no-results');
   container.innerHTML='';
-  document.getElementById('shown-count').textContent=filtered.length;
   if(!filtered.length){noRes.classList.remove('hidden');return;}
   noRes.classList.add('hidden');
   const byDay={};
